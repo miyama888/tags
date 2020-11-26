@@ -1,4 +1,12 @@
 class TagsController < ApplicationController
+
+	def index
+	end
+
+	def show
+		@tag = Tag.find(params[:id])
+	end
+
 	def new
 		@tag = Tag.new
 	end
@@ -9,14 +17,13 @@ class TagsController < ApplicationController
 	  	@user =current_user
 	    @tags =Tag.all
 	  	if @tag.save
-	      redirect_to root_path(@tag)
+	      redirect_to tag_path(@tag)
 	    else
 	      render :index
 	    end
 	end
 
-	def index
-	end
+
 
 	private
 
