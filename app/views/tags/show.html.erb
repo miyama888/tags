@@ -2,4 +2,5 @@
 <br><%= @tag.title %>
 <p>内容</p>
 <br><%= @tag.body %>
-<%= link_to  "編集する", edit_tag_path %>
+<%= link_to  "編集する", edit_tag_path %> |
+<%=link_to "削除する", tag_path(@tag), method: :delete, "data-confirm" => "本当に削除してよろしいですか？" %>
