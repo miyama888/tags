@@ -1,0 +1,12 @@
+<div class = "container">
+	<div class = "row">
+		<h1>一覧</h1>
+		<% @tags.each do |tag| %>
+			<tr>
+				<td><%= tag.title %></td>
+				<td><%= tag.body %></td>
+				<td><%= link_to "詳細へ", tag_path(tag) %></td>
+			</tr>
+		<% end %>
+	</div>
+</div>
