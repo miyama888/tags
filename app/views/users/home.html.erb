@@ -1,11 +1,5 @@
 <h1>タグで作業を効率的に</h1>
 	<% if user_signed_in? %>
-		<% @tags.each do |tag| %>
-			<tr>
-				<td><%= tag.title %></td>
-				<td><%= tag.body %></td>
-				<td><%= link_to "詳細へ", tag_path(tag) %></td>
-			</tr>
-		<% end %>
+		<%= render 'tags/each' %>
 	<% end %>
 <br><%= link_to "タグを作成する", new_tag_path %>
