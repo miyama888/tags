@@ -1,9 +1,9 @@
 <div class = "container">
 	<div class = "row">
-		<p>タイトル</p>
-		<br><%= @tag.title %>
-		<p>内容</p>
-		<br><%= @tag.body %>
+		<div class = "tag">
+			<p>タイトル:<%= @tag.title %></p>
+			<p>内容:<%= @tag.body %></p>
+		</div>
 		<br><%= link_to  "編集する", edit_tag_path %> | <%= link_to "一覧へ", tags_path %> |
 		<%=link_to "削除する", tag_path(@tag), method: :delete, "data-confirm" => "本当に削除してよろしいですか？" %>
 	</div>

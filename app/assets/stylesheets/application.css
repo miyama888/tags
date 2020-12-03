@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.tag{
+	border-style: ridge;
+	border-width: thick;
+	border-color: blue;
+}
